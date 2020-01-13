@@ -99,10 +99,12 @@ module.exports = ({ name, entry, mode, outputPath, modulesFile }) => {
       new webpack.DefinePlugin({
         "process.env": JSON.stringify(exposedEnv)
       }),
-      new webpack.NormalModuleReplacementPlugin(
-        /node_modules\/@internal\/backoffice-base\/src\/modules\.js$/,
-        modulesFile
-      )
-    ]
+      modulesFile
+        ? new webpack.NormalModuleReplacementPlugin(
+            /node_modules\/@internal\/backoffice-base\/src\/modules\.js$/,
+            modulesFile
+          )
+        : null
+    ].filter(Boolean)
   };
 };
