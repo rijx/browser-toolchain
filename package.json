@@ -2,11 +2,16 @@
   "name": "@internal/toolchain",
   "version": "0.0.0",
   "main": "createWebpackConfig",
+  "peerDependencies": {
+    "jest": "^25.1.0",
+    "webpack": "^4.41.5"
+  },
   "dependencies": {
     "@babel/core": "^7.7.7",
     "@babel/plugin-transform-react-jsx": "^7.7.7",
     "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.7.7",
+    "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-import-to-require": "^1.0.0",
     "babel-plugin-react-require": "^3.1.3",
@@ -15,6 +20,7 @@
     "css-loader": "^3.4.1",
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
+    "jest-raw-loader": "^1.0.1",
     "node-sass": "^4.13.0",
     "raw-loader": "^4.0.0",
     "sass-loader": "^8.0.0",
