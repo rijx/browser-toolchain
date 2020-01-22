@@ -85,7 +85,14 @@ module.exports = ({ name, entry, mode, outputPath, modulesFile }) => {
         },
         {
           test: /\.graphql$/,
-          use: ["raw-loader"].map(require.resolve)
+          use: [
+            {
+              loader: require.resolve("raw-loader"),
+              options: {
+                esModule: false
+              }
+            }
+          ]
         }
       ]
     },
