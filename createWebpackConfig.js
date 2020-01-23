@@ -93,6 +93,18 @@ module.exports = ({ name, entry, mode, outputPath, modulesFile }) => {
               }
             }
           ]
+        },
+        {
+          test: /\.(png|jpe?g|gif|pdf)$/i,
+          use: [
+            {
+              loader: "file-loader",
+              options: {
+                name: "[path][name].[ext]?[contenthash]",
+                esModule: false
+              }
+            }
+          ]
         }
       ]
     },
