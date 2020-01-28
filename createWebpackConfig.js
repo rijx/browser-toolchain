@@ -42,6 +42,9 @@ module.exports = ({ name, entry, mode, outputPath, modulesFile }) => {
       filename: "index_bundle.js",
       publicPath: BASE_URL ? `${BASE_URL}/` : "/"
     },
+    resolve: {
+      mainFields: ["main"] 
+    },
     module: {
       rules: [
         {
