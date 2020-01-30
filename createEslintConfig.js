@@ -57,6 +57,7 @@ module.exports = () => {
           ],
           "newlines-between": "always",
           alphabetize: {
+            caseInsensitive: true,
             order: "asc"
           }
         }
